@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import { AudioClip } from './types';
 import Drum from './drum';
@@ -63,7 +62,7 @@ description: 'Kick'
 function App() {
 
   const playAudio = (e: React.KeyboardEvent<HTMLDivElement>) => {
-    const clip = audioClips.find((clip) => clip.keyTrigger === e.toUpperCase()
+    const clip = audioClips.find((clip) => clip.keyTrigger === e.key.toUpperCase()
     );
      if (!clip) return;
     (document.getElementById(clip.keyTrigger) as HTMLAudioElement)
